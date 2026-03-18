@@ -13,6 +13,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DML", "DML\DML.ssmssqlproj"
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Transact_SQL", "Transact_SQL\Transact_SQL.ssmssqlproj", "{76FF69B1-0B52-46D4-AB08-BC0BEF2C0847}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "StoredProcedures", "StoredProcedures\StoredProcedures.ssmssqlproj", "{72F6AAC2-B4DC-4E0F-8A12-895E081F39B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -22,7 +24,8 @@ Global
 		{A3997DEC-C17C-4FB9-8180-6DA1115DE656}.Default|Default.ActiveCfg = Default
 		{805650E0-2EE1-47B8-BAA5-8CDEF693E11A}.Default|Default.ActiveCfg = Default
 		{76FF69B1-0B52-46D4-AB08-BC0BEF2C0847}.Default|Default.ActiveCfg = Default
-		{E1A4D610-A664-43D2-BED3-B53BBF7CA196}.Default|Default.ActiveCfg = Default
+		{DC863D99-EE9D-4C76-8E96-F7C27F722BC3}.Default|Default.ActiveCfg = Default
+		{72F6AAC2-B4DC-4E0F-8A12-895E081F39B1}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
