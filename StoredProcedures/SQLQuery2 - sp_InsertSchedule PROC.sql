@@ -2,7 +2,7 @@
 USE PV_522_Import;
 GO
 
-CREATE PROCEDURE sp_InsertSchedule 
+ALTER PROCEDURE sp_InsertSchedule 
 		@group_name			AS	NCHAR(10),
 		@discipline_name	AS	NVARCHAR(150),
 		@teacher_name		AS	NVARCHAR(50),
@@ -35,7 +35,8 @@ BEGIN
 		
 			PRINT FORMATMESSAGE(N'%i, %s %s %s', @lesson_number, CAST(@date AS NVARCHAR(12)), DATENAME(WEEKDAY, @date), CAST(@time AS NVARCHAR(12)));
 			EXEC sp_InsertLesson @group, @discipline, @teacher, @date, @time OUTPUT, @lesson_number OUTPUT;
-		
-			SET @date = DATEADD(DAY, IIF(DATEPART(WEEKDAY, @date) = 6, 3, 2), @date);
+			
+			SET @date = dbo.GetNextLearningDate(@group_name, @date);
+			--SET @date = DATEADD(DAY, IIF(DATEPART(WEEKDAY, @date) = 6, 3, 2), @date);
 		END
 END
